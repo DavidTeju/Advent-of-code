@@ -1,7 +1,5 @@
-function solve() {
-  let fs = require("fs");
-
-  const text: string = fs.readFileSync("Day1/input.txt", "utf-8");
+function day1_2() {
+  let text: string = require("../inputter").get_input(__dirname);
 
   let answer = text
     .split("\n\n")
@@ -14,4 +12,4 @@ function solve() {
   console.log(answer);
 }
 
-solve();
+day1_2();

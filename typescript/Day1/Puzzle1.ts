@@ -1,10 +1,12 @@
-let fs = require("fs")
+let day1_1 = function () {
+  let text: string = require("../inputter").get_input(__dirname);
 
-const text: string = fs.readFileSync("Day1/input.txt", "utf-8")
+  let answer = text
+    .split("\n\n")
+    .map((elf) => elf.split("\n").map((food) => parseInt(food)))
+    .map((elf) => elf.reduce((total, curr) => total + curr))
+    .reduce((max, curr) => Math.max(max, curr));
 
-let answer = text.split("\n\n")
-    .map(elf => elf.split("\n").map(food => parseInt(food)))
-    .map(elf => elf.reduce((total, curr) => total + curr))
-    .reduce((max, curr) => Math.max(max, curr))
-
-console.log(answer)
+  console.log(answer);
+};
+day1_1();
