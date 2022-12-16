@@ -1,7 +1,5 @@
 import heapq
-
-with open("input.txt", "r+") as file:
-    text = file.read()
+from inputter import text
 
 elves = [sum(int(food) for food in elf.split("\n")) for elf in text.split("\n\n")]
 

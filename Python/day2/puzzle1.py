@@ -1,5 +1,4 @@
-with open("input.txt", "r+") as file:
-    text = file.read()
+from inputter import text
 
 # text = """A Y
 # B X
