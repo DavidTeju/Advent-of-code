@@ -12,9 +12,7 @@ def default_min_max(func, key):
 def each_pair(pair):
     func = max, min
     first, second = (default_min_max(func[i], lambda num: pair[num][i]) for i in range(2))
-    if second == first or first == -1 or second == -1:
-        return 1
-    return 0
+    return 1 if second == first or first == -1 or second == -1 else 0
 
 
 total = sum(each_pair(pair) for pair in list_of_pairs)
